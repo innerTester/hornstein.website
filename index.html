@@ -1,11 +1,29 @@
+
+
 <html>
 <body>
 
-<script  src="c:\Users\יונתן\Desktop\Hornstein\JS\db_test_connection.js"></script>
 
-<a>It's only us right now liad! </a>
-<h1>This is going to be awesome </h1>
-<button onclick=""></button>
+
+
+
+   EMAIL: <input type="text" placeholder="Enter email"  id="email"/>
+   USERNAME: <input type="text" placeholder="Enter username"  id='user'/>
+   <button onclick='createNew()'> click me</button>
+
+
+<script>
+
+    function createNew(){
+        var email=document.getElementById('email').value;
+        var user=document.getElementById('user').value;
+        var Http = new XMLHttpRequest();
+        var url='http://localhost:8080/demo/add?name='+user+'&email='+email;
+        Http.open("GET", url);
+        Http.send();
+       
+    }
+    </script>
 
 
 
