@@ -1,0 +1,34 @@
+.loginPanel{
+
+    text-align: center;
+    padding-top: 80px; 
+
+}
+
+.status{
+    
+    
+    padding-top: 30px;
+    text-align: center;
+    
+}   
+
+#stuText{
+    
+    border-style: dashed;
+    
+    color: chartreuse;
+}
+
+
+input{
+
+    margin: 5px;
+
+}
+
+button{
+
+    margin-top: 20px;
+
+}

@@ -1,0 +1,65 @@
+<html>
+<head>
+<link rel="stylesheet" href="Styles/login.css">
+</head>
+<body>
+
+
+
+
+<div class='LoginPanel'>
+    
+    Email: <input type="text" placeholder="Enter email"  id="username"/>   Password: <input type="password" placeholder="Enter username"  id='password'/> <br>
+    <button onclick='searchUser()'> Login!</button>
+
+</div>
+
+
+<div class="status">
+         
+    <span id="stuText">Hello </span>
+
+</div>
+               
+             
+<script>
+             
+     function searchUser(){
+     var username=document.getElementById('username').value;
+     var password=document.getElementById('password').value;
+     var Http = new XMLHttpRequest();
+     var url='http://localhost:8080/demo/login?email='+username;
+     Http.open("GET", url);
+     Http.send();
+     Http.onreadystatechange=function(){
+        if(this.readyState==4 && this.status==200){
+            
+            console.log(Http.responseText);
+            var user = JSON.parse(Http.responseText);
+            
+            
+            document.getElementById('stuText').textContent = 'SUCCSESS, Welcome '+user[0].email+".";
+
+
+        }
+     }  
+                    
+    }
+ </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

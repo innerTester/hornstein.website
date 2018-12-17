@@ -1,26 +1,30 @@
-
-
 <html>
+<head>
+<link rel="stylesheet" href="Styles/index.css">   
+</head>    
 <body>
 
 
 
 
-
-   EMAIL: <input type="text" placeholder="Enter email"  id="email"/>
-   USERNAME: <input type="text" placeholder="Enter username"  id='user'/>
-   <button onclick='createNew()'> click me</button>
-
+<div class='registerPanel'>
+   EMAIL: <input type="text" placeholder="Enter email"  id="email"/>  Password: <input type="password" placeholder="Enter password"  id='password'/> <br>
+   <a href="file:///C:/Users/%D7%99%D7%95%D7%A0%D7%AA%D7%9F/Desktop/Hornstein/check.html"><button onclick='createNew()'> Register!</button></a>
+</div>
+  
 
 <script>
 
     function createNew(){
         var email=document.getElementById('email').value;
-        var user=document.getElementById('user').value;
+        var password=document.getElementById('password').value;
         var Http = new XMLHttpRequest();
-        var url='http://localhost:8080/demo/add?name='+user+'&email='+email;
+        var url='http://localhost:8080/demo/add?email='+email+'&password='+password;
         Http.open("GET", url);
         Http.send();
+
+        console.log(Http.responseText)
+
        
     }
     </script>

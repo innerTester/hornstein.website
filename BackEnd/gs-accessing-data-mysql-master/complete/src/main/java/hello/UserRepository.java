@@ -1,5 +1,8 @@
 package hello;
 
+
+import java.util.List;
+
 import org.springframework.data.repository.CrudRepository;
 
 import hello.User;
@@ -9,4 +12,9 @@ import hello.User;
 
 public interface UserRepository extends CrudRepository<User, Integer> {
 
+	
+	
+	List<User> findByEmail(String email);
+	List<User> findByPassword(String password);
+	
 }
