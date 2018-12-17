@@ -1,29 +1,6 @@
-<html>
-<head>
-<link rel="stylesheet" href="Styles/login.css">
-<link href="JS/check.js">
-
-</head>
-<body>
-
-
-
-
-<div class='LoginPanel'>
-    
-    Email: <input type="text" placeholder="Enter email"  id="username"/>   Password: <input type="password" placeholder="Enter username"  id='password'/> <br>
-    <button onClick='alert("Hello")'> Login!</button>
-
-
-<div class="status">
-         
-    <span id="stuText">Hello </span>
-
-</div>
-               
-             
-<script>
-             
+     alert("haim")
+     var liad = 5 ; 
+     console.log(liad)
      function searchUser(){
      var username=document.getElementById('username').value;
      var password=document.getElementById('password').value;
@@ -45,21 +22,4 @@
      }  
                     
     }
- </script>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</body>
-</html>
