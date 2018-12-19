@@ -9,9 +9,11 @@
 
       <div class="login">
          
-         
-         <input type="text" placeholder="Email" id="email">  
-         <input type="password" placeholder="Password" id="password">
+         <form>
+         <input type="email" required placeholder="Email" id="email" >  
+         <input type="password" required pattern="(?=.*\d)(?=.*[a-z]).{8,}"  title="Must contain at least one number and one uppercase, and at least 8 or more characters" 
+         placeholder="Password" id="password" >
+         <input type="phone" required placeholder="Phone" id="phone" > 
          <div>
             <a id="welcome"> </a>
          </div>  
@@ -22,7 +24,7 @@
          </div>
          </div>
         <div class="shadow"></div>
-        
+    </form>
 <script>
 
    function greet(){
