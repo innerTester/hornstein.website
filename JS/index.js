@@ -8,7 +8,16 @@
         Http.open("GET", url);
         Http.send();
 
-        console.log(Http.responseText)
+        if(this.readyState==4 && this.status==200){
+            
+            console.log(Http.responseText);
+            var user = JSON.parse(Http.responseText);
+            
+            
+            document.getElementById('stuText').textContent = 'SUCCSESS, Welcome '+user[0].email+".";
+
+
+        }
 
        
     }
