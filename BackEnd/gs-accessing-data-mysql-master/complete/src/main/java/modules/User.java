@@ -1,4 +1,5 @@
-package hello;
+package modules;
+
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -14,6 +15,16 @@ public class User {
     private String email;
 
     private String password;
+    
+    private String phone;
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
 
 	public Integer getId() {
 		return id;
@@ -39,9 +50,8 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-    
+
 	
 	
     
 }
-
